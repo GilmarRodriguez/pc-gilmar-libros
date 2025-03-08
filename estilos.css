@@ -1,76 +1,76 @@
 
 /* pie de pagina */
-body {
+/* body {
     display: flex;
       flex-direction: column;
-      min-height: 100vh;
-  }
+      min-height: 100vh; */
   
-  footer {
-      margin-top: auto;
-  }
-  
-  *{
-      box-sizing: border-box;
-  }
-  .azul { 
-      text-align: center;
-      color: #2f7ba2; font-size: 50px;
-  } 
-  .navegacion a{
-      background-color: #f76a6a; 
-      color: #000;
-      padding: 10px 10px;
-      margin: 10px 10px;  
-      text-decoration: none;
-  }
-  
-  .navegacion div{
-      display: flex;
-  }
-  
-  .libre-baskerville-regular {
-      font-family: "Libre Baskerville", serif;
-      font-weight: 400;
-      font-style: normal;
+      *{
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        box-sizing:
+        border-box;
     }
     
-    .libre-baskerville-bold {
-      font-family: "Libre Baskerville", serif;
-      font-weight: 700;
-      font-style: normal;
+    .contenedor1 {
+        width: 100%;
+        /* justify-content: center; */
+        align-items: center; 
+        background-color: #543a3a;
+        border: #000 2px solid;
+        border-radius: 1rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+        grid-template-rows: 1fr;
+        padding: 10px;
+        grid-template-areas:
+        "h1 libros autores generos biblioteca" 
     }
-    
-    .libre-baskerville-regular-italic {
-      font-family: "Libre Baskerville", serif;
-      font-weight: 400;
-      font-style: italic;
+    @media (max-width: 700px) {
+        .contenedor1 {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas:
+            "h1 libros autores"
+            "h1 generos biblioteca"
+        }
+        
     }
-  
-  .caja1 {
-      margin: 10px;
-      padding: 10px;
-      border: 1px solid #ccc;
-      background-color: #f9f9f9;
-      /* width: 50%; */
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-  }   
-  
-  .flexbox {
-      display: flex;
-      flex-direction : center; 
-      align-items: center; 
-      /* justify-content: center ;  */
-      margin: 10px 10px;
-      padding: 10px 10px;
-  
-  
-  }
-  
-  
-  
-  
-  
-   
+    .contenedor1 a {
+        border-radius: 1rem;
+        width: auto;
+        height: 100px;
+        background-color: rgb(45, 141, 49);
+        border: #000 2px solid;
+        text-decoration: none;
+        font-size: 2rem;
+        color: #000;
+        /* este es para centrar el texto con grid: display:grid  place-items: center; */ ;   
+        display:grid ;
+        place-items: center;
+    }
+    .contenedor1 h1 {
+        /* color: #fff; */
+        text-align: center;
+        grid-area: h1;
+    }
+    .itemlibros{
+              grid-area: libros;
+    }
+    .itemautores{
+              grid-area: autores;
+    }
+    .itemgeneros{
+              grid-area: generos;
+    }   
+    .itembiblioteca{
+        grid-area: biblioteca;
+    }
+    .contenedor1 a:hover{
+        background-color: #000;
+        transition:0.5s;
+        color: #ffffff;
+    }
+    body {
+        background-color: #000;
+    }
